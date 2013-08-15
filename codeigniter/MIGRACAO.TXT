@@ -1,0 +1,13 @@
+Migração de Servidor
+--------------------
+
+1. Crie um banco de dados com o nome 'agenda'
+2. Selecione o banco de dados criado
+3. Rode o arquivo agenda.sql que se encontra em '../projeto' em um cliente sql ou importe o arquivo pelo phpmyadmin
+4. Altere o arquivo 'database.php' que se encontra em 'application/config' nas seguintes linhas:
+4.1. Linha 51 => Substituir 'localhost' pelo nome ou ip do servidor de banco de dados
+4.2. Linha 52 => Substituir 'root' pelo nome do usuário no banco de dados
+4.3. Linha 53 => Substituir '123456' pela senha do banco de dados
+4.4. Linha 54 => Caso tenha criado o banco com outro nome, substituir 'agenda' pelo nome do banco de dados
+5. Altere o arquivo '.htaccess' que se encontra na raiz, substituir '/primeira-agenda/codeigniter' pela uri do novo servidor
+6. FIM
