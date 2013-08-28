@@ -19,6 +19,7 @@ Ext.define('Agenda.store.json.TiposContatos', {
         writer: {
             type: 'json',
             writeAllFields: true,
+            writeRecordId: false,
             encode: true,
             root: 'tipos_contatos'
         }

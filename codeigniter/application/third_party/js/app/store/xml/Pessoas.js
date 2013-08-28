@@ -20,6 +20,7 @@ Ext.define('Agenda.store.xml.Pessoas', {
         writer: {
             type: 'xml',
             writeAllFields: true,
+            writeRecordId: false,
             encode: true,
             documentRoot: 'pessoas',
             record: 'pessoa',

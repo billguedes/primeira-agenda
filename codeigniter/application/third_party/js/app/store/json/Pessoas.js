@@ -19,6 +19,7 @@ Ext.define('Agenda.store.json.Pessoas', {
         writer: {
             type: 'json',
             writeAllFields: true,
+            writeRecordId: false,
             encode: true,
             root: 'pessoas'
         }

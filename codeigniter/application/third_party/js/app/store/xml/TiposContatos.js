@@ -20,6 +20,7 @@ Ext.define('Agenda.store.xml.TiposContatos', {
         writer: {
             type: 'xml',
             writeAllFields: true,
+            writeRecordId: false,
             encode: true,
             documentRoot: 'tipos_contatos',
             record: 'tipo_contato',
