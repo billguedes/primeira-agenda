@@ -1,3 +1,5 @@
-RewriteEngine on
-RewriteCond $1 !^(index\.php|robots\.txt|assets)
-RewriteRule ^(.*)$ /primeira-agenda/codeigniter/index.php/$1 [L]
+RewriteEngine On
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /primeira-agenda/codeigniter/index.php [L]

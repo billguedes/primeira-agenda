@@ -10,10 +10,11 @@ SET time_zone = "+00:00";
 CREATE TABLE `pessoa` (
   `codigo` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `nome` varchar(50) NOT NULL,
+  `foto` varchar(100) NOT NULL,
   `observacao` text NOT NULL,
   PRIMARY KEY (`codigo`),
   UNIQUE KEY `nome` (`nome`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE `pessoa_apelido` (
   `codigo` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -23,7 +24,7 @@ CREATE TABLE `pessoa_apelido` (
   UNIQUE KEY `nome` (`nome`),
   KEY `pessoa_codigo` (`pessoa_codigo`),
   KEY `fk_pessoa_apelido_pessoa_idx` (`pessoa_codigo`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE `pessoa_contato` (
   `codigo` int(11) NOT NULL AUTO_INCREMENT,
@@ -41,7 +42,7 @@ CREATE TABLE `tipo_contato` (
   `observacao` text NOT NULL,
   PRIMARY KEY (`codigo`),
   UNIQUE KEY `nome` (`nome`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 ALTER TABLE `pessoa_apelido`
